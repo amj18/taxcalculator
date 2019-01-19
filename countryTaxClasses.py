@@ -17,11 +17,11 @@ class UKTax():
         self.studentLoanRate = studentLoanRate
         self.studentLoanLL = studentLoanLL
 
-        def national_insurance_rate_uk(self):
-            weeklySalary = self.salary/52.0
-            if weeklySalary <= self.ni_a:
-                return 0.0
-            elif weeklySalary > self.ni_a and weeklySalary <= self.ni_b:
-                return (self.ni_p1*(weeklySalary-ni_a))
-            elif weeklySalary > ni_b:
-                return (ni_p1*(ni_b-ni_a))+(ni_p2*(weeklySalary-ni_b))
+    def national_insurance_rate_uk(self):
+        weeklySalary = self.salary/52.0
+        if weeklySalary <= self.ni_a:
+            return 0.0
+        elif weeklySalary > self.ni_a and weeklySalary <= self.ni_b:
+            return (self.ni_p1*(weeklySalary-ni_a))
+        elif weeklySalary > ni_b:
+            return (ni_p1*(ni_b-ni_a))+(ni_p2*(weeklySalary-ni_b))
