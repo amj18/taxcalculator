@@ -1,4 +1,7 @@
 class UKTax():
+    """
+    Constructor for UK tax variables
+    """
     def __init__(self, salary, ni_a, ni_b, ni_p1, ni_p2, personalAllowance, basicRate, higherRate, additionalRate, basicUL, higherUL, studentLoanRate, studentLoanLL):
         self.salary = salary
         self.ni_a = ni_a
