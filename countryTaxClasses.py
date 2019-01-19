@@ -22,6 +22,6 @@ class UKTax():
         if weeklySalary <= self.ni_a:
             return 0.0
         elif weeklySalary > self.ni_a and weeklySalary <= self.ni_b:
-            return (self.ni_p1*(weeklySalary-ni_a))
-        elif weeklySalary > ni_b:
-            return (ni_p1*(ni_b-ni_a))+(ni_p2*(weeklySalary-ni_b))
+            return (self.ni_p1*(weeklySalary-self.ni_a))
+        elif weeklySalary > self.ni_b:
+            return (self.ni_p1*(self.ni_b-self.ni_a))+(self.ni_p2*(weeklySalary-self.ni_b))
