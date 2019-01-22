@@ -50,4 +50,18 @@ class UKTax():
                 totalTaxable = taxableIncome*self.basicRate
                 totalDeductions = totalTaxable + ni 
                 final = self.salary - totalDeductions
-                return final    
+                return final   
+        
+        # Tax up to upper limit of basic rate
+        elif taxableIncome > self.personalAllowance and taxableIncome <= self.basicUL:
+            if self.studentLoan==True and self.salary>self.studentLoanLL:
+                totalTaxable = taxableIncome*self.basicRate
+                totalDeductions = totalTaxable+sl+ni
+                final = salary-totalDeductions
+                return final
+            else:
+                totalTaxable = taxableIncome*self.basicRate
+                totalDeductions = totalTaxable+ni
+                final = salary-totalDeductions
+                return final
+
